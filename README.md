@@ -21,3 +21,18 @@ level5: Status = TODO: If the queen bees drinks honey on its way then she increa
 
 Level5: Status = TODO: On her way other apoidea comes and queen  has to avoid then else they will stick to her and size of the queen bee increase which makes 
 her difficult to pass through narrow obstacles.
+
+
+
+
+
+
+
+
+Reference Books and Links:
+
+3D Math Primer For Graphics And Game Development  by Fletcher Dunn and Ian Parberry
+Game physics Engine developement by IanMilinton
+http://gameprogrammingpatterns.com/game-loop.html
+http://code.tutsplus.com/tutorials/quick-tip-collision-detection-between-a-circle-and-a-line-segment--active-10632
+
