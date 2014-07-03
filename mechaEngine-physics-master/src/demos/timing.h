@@ -18,79 +18,56 @@
  */
 struct TimingData
 {
-    /** The current render frame. This simply increments. */
+    //The current render frame. This simply increments.
     unsigned frameNumber;
 
-    /**
-     * The timestamp when the last frame ended. Times are
-     * given in milliseconds since some undefined time.
-     */
+    //The clockstamp of the end of the last frame.
+    unsigned long lastFrameClockstamp;
+    
+    
+    //The duration of the last frame in clock ticks.
+    unsigned long lastFrameClockTicks;
+    
+    //The timestamp when the last frame ended. Times are
+    //given in milliseconds since some undefined time.
     unsigned lastFrameTimestamp;
 
-    /**
-     * The duration of the last frame in milliseconds.
-     */
+    
+    //The duration of the last frame in milliseconds.
     unsigned lastFrameDuration;
 
-    /**
-     * The clockstamp of the end of the last frame.
-     */
-    unsigned long lastFrameClockstamp;
-
-    /**
-     * The duration of the last frame in clock ticks.
-     */
-    unsigned long lastFrameClockTicks;
-
-    /**
-     * Keeps track of whether the rendering is paused.
-     */
+    
+    //Keeps track of whether the rendering is paused.
     bool isPaused;
 
     // Calculated data
 
-    /**
-     * This is a recency weighted average of the frame time, calculated
-     * from frame durations.
-     */
+    //This is a recency weighted average of the frame time, calculated
+    //from frame durations.
     double averageFrameDuration;
 
-    /**
-     * The reciprocal of the average frame duration giving the mean
-     * fps over a recency weighted average.
-     */
+    //Initialises the frame information system. Use the overall
+    //init function to set up all modules.
+    static void init();
+    
+    //Deinitialises the frame information system.
+    static void deinit();
+    
+    //The reciprocal of the average frame duration giving the mean
+    //fps over a recency weighted average.
     float fps;
 
-    /**
-     * Gets the global timing data object.
-     */
+    //Gets the global timing data object.
     static TimingData& get();
 
-    /**
-     * Updates the timing system, should be called once per frame.
-     */
+    //Updates the timing system, should be called once per frame.
     static void update();
 
-    /**
-     * Initialises the frame information system. Use the overall
-     * init function to set up all modules.
-     */
-    static void init();
-
-    /**
-     * Deinitialises the frame information system.
-     */
-    static void deinit();
-
-    /**
-     * Gets the global system time, in the best resolution possible.
-     * Timing is in milliseconds.
-     */
+    //Gets the global system time, in the best resolution possible.
+    //Timing is in milliseconds.
     static unsigned getTime();
 
-    /**
-     * Gets the clock ticks since process start.
-     */
+    //Gets the clock ticks since process start.
     static unsigned long getClock();
 
 
