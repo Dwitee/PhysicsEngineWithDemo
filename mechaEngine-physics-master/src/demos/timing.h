@@ -3,7 +3,7 @@
  *
  * Part of the mechaEngine physics system.
 */
-s
+
 /**
  * @file
  *
