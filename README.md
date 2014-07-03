@@ -2,6 +2,7 @@ GitHubProjects
 ==============
 
 Apoidea prototype projects based on Honey Bee
+the youtube demo is at http://youtu.be/zEWxrInZ2tY
 
 This is Project prototype where the player has to move the queen bee ( red bee) anlong with the male bees ( black) ,
 There will be obstacles on her way out of the tunnel.
