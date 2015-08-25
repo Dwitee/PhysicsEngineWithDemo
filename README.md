@@ -1,5 +1,5 @@
-GitHubProjects
-==============
+Physics Engine usage demo with Apoidea game
+===========================================
 
 Apoidea prototype projects based on Honey Bee
 the youtube demo is at https://www.youtube.com/watch?v=f9VRmtdVZoU
